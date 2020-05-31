@@ -1,0 +1,15 @@
+{% extends 'layout/basic.html' %}
+
+{% block title %}Удаление новости{% endblock %}
+
+{% block content %}
+    <h2>Удаление новости</h2>
+    <p>Рубрика: {{ bb.rubric.name }}</p>
+    <p>Заголовок: {{ bb.title }}</p>
+    <p>{{ bb.content }}</p>
+    <p>Автор: {{ bb.name_author }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить">
+    </form>
+{% endblock %}

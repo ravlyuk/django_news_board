@@ -1,0 +1,39 @@
+{% extends "layout/basic.html" %}
+
+{% block content %}
+    <div class="bold_title">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">&lt;</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+        {% endif %}
+        Страница №{{ page.number }} из {{ page.paginator.num_pages }}
+        {% if page.has_next %}
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="?page={{ page.next_page_number }}">&gt;</a>
+        {% endif %}
+        <br><br><br>
+    </div>
+    {% for bb in bbs %}
+        <div>
+            <hr>
+            <p>Опубликовано: {{ bb.published|date:"d.m.Y H:i:s" }}, Рубрика: <a
+                    href="/{{ bb.rubric.pk }}/">{{ bb.rubric.name }}</a>, Голосов: {{ bb.likes }}</p>
+            <h2><a href="{% url 'detail' pk=bb.pk %}">{{ bb.title }}</a></h2>
+            <p ><a class="edit_post" href="{% url 'edit' pk=bb.pk %}">Редактировать</a> <a class="edit_post" href="{% url 'delete' pk=bb.pk %}">Удалить</a>
+            </p>
+        </div>
+    {% endfor %}
+    <div class="bold_title">
+        <hr>
+        <br><br><br>
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">&lt;</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+        {% endif %}
+        Страница №{{ page.number }} из {{ page.paginator.num_pages }}
+        {% if page.has_next %}
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="?page={{ page.next_page_number }}">&gt;</a>
+        {% endif %}
+    </div>
+{% endblock %}
