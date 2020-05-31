@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "=8)^5ii(5*_nb)rnrb2bfty9^==ypzlz@(+nh9%&i6g^6h*cex"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['news-board2020.herokuapp.com', '127.0.0.1']
 
@@ -111,7 +111,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-os.makedirs(STATIC_ROOT, exist_ok=True)
+# os.makedirs(STATIC_ROOT, exist_ok=True)
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
