@@ -1,19 +1,5 @@
 from django.urls import path
-from .views import (
-    NewsCreateView,
-    NewsListView,
-    NewsDetailView,
-    NewsVoiceUpdateView,
-    CommentCreateView,
-    CommentListView,
-    CommentDetailView,
-    BbCreateView,
-    BbEditView,
-    BbDeleteView,
-    BbByRubricView,
-    BbDetailView,
-    index,
-)
+from .views import *
 
 api_base = "api/v1/news/"
 
