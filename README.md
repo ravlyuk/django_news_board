@@ -23,16 +23,7 @@ Allow: POST, OPTIONS
 
 http://news-board2020.herokuapp.com/api/v1/news/all/
 
-Allow: GET, HEAD, OPTIONS
-
-{
-        "title": '',
-        "content": '',
-        "name_author": '',
-        "rubric": '',
-        "published": '',
-        "likes": ''
-}
+Allow: GET
 
 -------------
 
