@@ -17,6 +17,7 @@ Allow: POST, OPTIONS
     "rubric": ""
 }
 
+-------------
 
 **show all news:** 
 
@@ -33,6 +34,8 @@ Allow: GET, HEAD, OPTIONS
         "likes": ''
 }
 
+-------------
+
 **get, update, delete single news:** 
 
 http://news-board2020.herokuapp.com/api/v1/news/detail/<id_post>/
@@ -47,6 +50,8 @@ Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
         "published": ''
 }
 
+-------------
+
 **post voice:** 
 
 http://news-board2020.herokuapp.com/api/v1/news/voice/
@@ -56,6 +61,8 @@ Allow: POST, OPTIONS
 {
         "id_news": ''
 }
+
+-------------
 
 **add comment:** 
 
@@ -69,6 +76,8 @@ Allow: POST, OPTIONS
     "post": ""
 }
 
+-------------
+
 **all comments:** 
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/all/
@@ -81,6 +90,8 @@ Allow: GET
     "post": "",
     "published": ""
 }
+
+-------------
 
 **get, update, delete single comment:** 
 
