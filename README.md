@@ -1,4 +1,3 @@
-# news_board
 **very simple fronted:**  http://news-board2020.herokuapp.com
 
 
