@@ -9,7 +9,7 @@
 
 http://news-board2020.herokuapp.com/api/v1/news/all/
 
-Method: GET
+**Method**: GET
 
 -------------
 
@@ -18,9 +18,9 @@ Method: GET
  http://news-board2020.herokuapp.com/api/v1/news/create/
 
 
-Method: POST, OPTIONS
+**Method**: POST, OPTIONS
 
-Values: title, content, name_author, rubric
+**Values**: title, content, name_author, rubric
 
 -------------
 
@@ -28,9 +28,9 @@ Values: title, content, name_author, rubric
 
 http://news-board2020.herokuapp.com/api/v1/news/detail/<post_id>/
 
-Method: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+**Method**: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
-Values: title, content, name_author, rubric, published
+**Values**: title, content, name_author, rubric, published
 
 -------------
 
@@ -38,9 +38,9 @@ Values: title, content, name_author, rubric, published
 
 http://news-board2020.herokuapp.com/api/v1/news/voice/
 
-Method: POST
+**Method**: POST
 
-Values: id_news
+**Values**: id_news
 
 -------------
 
@@ -48,9 +48,9 @@ Values: id_news
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/create/<post_id>/
 
-Method: POST
+**Method**: POST
 
-Values: name, content, post
+**Values**: name, content, post
 
 -------------
 
@@ -58,9 +58,9 @@ Values: name, content, post
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/all/
 
-Method: GET
+**Method**: GET
 
-Values name, content, post, published
+**Values**: name, content, post, published
 
 -------------
 
@@ -68,6 +68,6 @@ Values name, content, post, published
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/detail/<post_id>/
 
-Method: GET, PUT, PATCH, DELETE, OPTIONS
+**Method**: GET, PUT, PATCH, DELETE, OPTIONS
 
-Values: name, content, post
+**Values**: name, content, post
