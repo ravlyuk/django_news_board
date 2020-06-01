@@ -22,7 +22,6 @@ Method: POST, OPTIONS
 
 Values: title, content, name_author, rubric
 
-
 -------------
 
 **get, update, delete the single news:** 
@@ -62,7 +61,6 @@ http://news-board2020.herokuapp.com/api/v1/news/comments/all/
 Method: GET
 
 Values name, content, post, published
-}
 
 -------------
 
@@ -73,4 +71,3 @@ http://news-board2020.herokuapp.com/api/v1/news/comments/detail/<post_id>/
 Method: GET, PUT, PATCH, DELETE, OPTIONS
 
 Values: name, content, post
-}
