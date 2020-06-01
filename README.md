@@ -3,6 +3,16 @@
 
 # BASE API FUNCTIONAL
 
+
+
+**show all news:** 
+
+http://news-board2020.herokuapp.com/api/v1/news/all/
+
+Allow: GET
+
+-------------
+
 **create news:**
  
  http://news-board2020.herokuapp.com/api/v1/news/create/
@@ -17,13 +27,6 @@ Allow: POST, OPTIONS
     "rubric": ""
 }
 
--------------
-
-**show all news:** 
-
-http://news-board2020.herokuapp.com/api/v1/news/all/
-
-Allow: GET
 
 -------------
 
