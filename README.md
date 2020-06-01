@@ -15,7 +15,7 @@ Allow: POST, OPTIONS
     "title": "",
     "content": "",
     "name_author": "",
-    "rubric": null
+    "rubric": ""
 }
 
 **show all news:** 
@@ -78,7 +78,7 @@ Allow: GET
 {
     "name": "",
     "content": "",
-    "post": null,
+    "post": "",
     "published": ""
 }
 
