@@ -21,10 +21,10 @@ Allow: GET
 Allow: POST, OPTIONS
 
 {
-    "title": <value>,
-    "content": <value>,
-    "name_author": <value>,
-    "rubric": <value>
+    "title": "value",
+    "content": "value",
+    "name_author": "value",
+    "rubric": "value"
 }
 
 
@@ -37,11 +37,11 @@ http://news-board2020.herokuapp.com/api/v1/news/detail/<post_id>/
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
 {
-        "title": <value>,
-        "content": <value>,
-        "name_author": <value>,
-        "rubric": <value>,
-        "published": <value>
+        "title": "value",
+        "content": "value",
+        "name_author": "value",
+        "rubric": "value",
+        "published": "value"
 }
 
 -------------
@@ -53,7 +53,7 @@ http://news-board2020.herokuapp.com/api/v1/news/voice/
 Allow: POST
 
 {
-        "id_news": <value>
+        "id_news": "value"
 }
 
 -------------
@@ -65,9 +65,9 @@ http://news-board2020.herokuapp.com/api/v1/news/comments/create/<post_id>/
 Allow: POST
 
 {
-    "name": <value>,
-    "content": <value>,
-    "post": <value>
+    "name": "value",
+    "content": "value",
+    "post": "value"
 }
 
 -------------
@@ -79,10 +79,10 @@ http://news-board2020.herokuapp.com/api/v1/news/comments/all/
 Allow: GET
 
 {
-    "name": <value>,
-    "content": <value>,
-    "post": <value>,
-    "published": <value>
+    "name": "value",
+    "content": "value",
+    "post": "value",
+    "published": "value"
 }
 
 -------------
@@ -94,7 +94,7 @@ http://news-board2020.herokuapp.com/api/v1/news/comments/detail/<post_id>/
 Allow: GET, PUT, PATCH, DELETE, OPTIONS
 
 {
-    "name": <value>,
-    "content": <value>,
-    "post": <value>
+    "name": "value",
+    "content": "value",
+    "post": "value"
 }
