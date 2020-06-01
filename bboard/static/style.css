@@ -2,7 +2,7 @@ header h1 {
     font-size: 30pt;
     text-transform: uppercase;
     text-align: center;
-    background: url('bg.jpg') left / auto 100% no-repeat;
+    background: url('https://raw.githubusercontent.com/ravlyuk/news_board/master/bboard/static/bg.jpg') left / auto 100% no-repeat;
 }
 
 nav {
