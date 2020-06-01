@@ -27,7 +27,7 @@ Allow: GET
 
 -------------
 
-**get, update, delete single news:** 
+**get, update, delete the single news:** 
 
 http://news-board2020.herokuapp.com/api/v1/news/detail/<post_id>/
 
@@ -47,7 +47,7 @@ Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
 http://news-board2020.herokuapp.com/api/v1/news/voice/
 
-Allow: POST, OPTIONS
+Allow: POST
 
 {
         "id_news": ''
@@ -59,7 +59,7 @@ Allow: POST, OPTIONS
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/create/<post_id>/
 
-Allow: POST, OPTIONS
+Allow: POST
 
 {
     "name": "",
@@ -88,7 +88,7 @@ Allow: GET
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/detail/<post_id>/
 
-Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Allow: GET, PUT, PATCH, DELETE, OPTIONS
 
 {
     "name": "",
