@@ -1,5 +1,5 @@
 # news_board
-**site url:**  http://news-board2020.herokuapp.com
+**site url (very simple fronted):**  http://news-board2020.herokuapp.com
 
 
 # BASE API FUNCTIONAL
