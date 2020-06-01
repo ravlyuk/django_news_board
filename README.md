@@ -9,7 +9,7 @@
 
 http://news-board2020.herokuapp.com/api/v1/news/all/
 
-Allow: GET
+Method: GET
 
 -------------
 
@@ -18,14 +18,9 @@ Allow: GET
  http://news-board2020.herokuapp.com/api/v1/news/create/
 
 
-Allow: POST, OPTIONS
+Method: POST, OPTIONS
 
-{
-    "title": "value",
-    "content": "value",
-    "name_author": "value",
-    "rubric": "value"
-}
+Values: title, content, name_author, rubric
 
 
 -------------
@@ -34,15 +29,9 @@ Allow: POST, OPTIONS
 
 http://news-board2020.herokuapp.com/api/v1/news/detail/<post_id>/
 
-Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Method: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
-{
-        "title": "value",
-        "content": "value",
-        "name_author": "value",
-        "rubric": "value",
-        "published": "value"
-}
+Values: title, content, name_author, rubric, published
 
 -------------
 
@@ -50,11 +39,9 @@ Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
 http://news-board2020.herokuapp.com/api/v1/news/voice/
 
-Allow: POST
+Method: POST
 
-{
-        "id_news": "value"
-}
+Values: id_news
 
 -------------
 
@@ -62,13 +49,9 @@ Allow: POST
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/create/<post_id>/
 
-Allow: POST
+Method: POST
 
-{
-    "name": "value",
-    "content": "value",
-    "post": "value"
-}
+Values: name, content, post
 
 -------------
 
@@ -76,13 +59,9 @@ Allow: POST
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/all/
 
-Allow: GET
+Method: GET
 
-{
-    "name": "value",
-    "content": "value",
-    "post": "value",
-    "published": "value"
+Values name, content, post, published
 }
 
 -------------
@@ -91,10 +70,7 @@ Allow: GET
 
 http://news-board2020.herokuapp.com/api/v1/news/comments/detail/<post_id>/
 
-Allow: GET, PUT, PATCH, DELETE, OPTIONS
+Method: GET, PUT, PATCH, DELETE, OPTIONS
 
-{
-    "name": "value",
-    "content": "value",
-    "post": "value"
+Values: name, content, post
 }
