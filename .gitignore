@@ -112,3 +112,6 @@ media/
 !**/migrations/__init__.py
 
 .idea
+
+gunicorn.conf.py
+gunicorn.conf.py
