@@ -54,6 +54,10 @@ coverage.xml
 *.log
 local_settings.py
 
+prod_settings.py
+gunicorn.conf.py
+news.conf
+
 # Flask stuff:
 instance/
 .webassets-cache
@@ -113,5 +117,3 @@ media/
 
 .idea
 
-gunicorn.conf.py
-gunicorn.conf.py
