@@ -5,27 +5,35 @@ from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from django.urls import reverse
+
 from rest_framework import generics
 from rest_framework.response import Response
 
-from .serializers import *
+from .serializers import (
+    NewsListSerialazer,
+    NewsListDetailSerialazer,
+    NewsVoiceSerializer,
+    CommentListDetailSerialazer
+)
 from .models import Bb, Rubric, Comment
 from .forms import BbForm
 
 
 # NEWS API
-class NewsCreateView(generics.CreateAPIView):
-    serializer_class = NewsListDetailSerialazer
-
-
 class NewsListView(generics.ListAPIView):
+    """Список новостей"""
     serializer_class = NewsListSerialazer
     queryset = Bb.objects.all()
 
 
 class NewsDetailView(generics.RetrieveUpdateDestroyAPIView):
+    """Вывод конкретной новости"""
     serializer_class = NewsListDetailSerialazer
     queryset = Bb.objects.all()
+ 
+
+class NewsCreateView(generics.CreateAPIView):
+    serializer_class = NewsListDetailSerialazer
 
 
 class NewsVoiceUpdateView(generics.GenericAPIView):
