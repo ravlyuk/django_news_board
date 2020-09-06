@@ -5,8 +5,8 @@ api_base = "api/v1/news/"
 
 urlpatterns = [
     # API NEWS
-    path(api_base + "create/", NewsCreateView.as_view()),
     path(api_base + "all/", NewsListView.as_view()),
+    path(api_base + "create/", NewsCreateView.as_view()),
     path(api_base + "detail/<int:pk>/", NewsDetailView.as_view()),
     path(api_base + "voice/", NewsVoiceUpdateView.as_view()),
     # API COMMENTS

@@ -1,4 +1,3 @@
-import dj_database_url
 import os
 
 INSTALLED_APPS = [
@@ -10,7 +9,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "bboard.apps.BboardConfig",
     "rest_framework",
-    "django_cron",
 ]
 
 MIDDLEWARE = [
@@ -21,10 +19,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
-ROOT_URLCONF = "samplesite.urls"
+ROOT_URLCONF = "news.urls"
 
 TEMPLATES = [
     {
@@ -42,13 +39,29 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "samplesite.wsgi.application"
+WSGI_APPLICATION = "news.wsgi.application"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
+DEBUG = int(os.environ.get("DEBUG", default=0))
+
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+DATABASES = {
+    "default": {
+        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+        "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
+        "USER": os.environ.get("SQL_USER", "user"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
+        "HOST": os.environ.get("SQL_HOST", "localhost"),
+        "PORT": os.environ.get("SQL_PORT", "5432"),
+    }
+}
 
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES["default"].update(db_from_env)
@@ -81,13 +94,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-
-
-
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -97,7 +103,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #     "bboard.cron.MyCronJob",
 # ]
 
-try:
-    from .local_settings import *
-except ImportError:
-    from .prod_settings import *
+STATIC_URL = "/staticfiles/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+MEDIA_URL = "/mediafiles/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")

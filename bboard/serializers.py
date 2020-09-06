@@ -2,8 +2,9 @@ from rest_framework import serializers
 from .models import Bb, Comment
 
 
-# NEWS
 class NewsListSerialazer(serializers.ModelSerializer):
+    """Список новостей"""
+
     class Meta:
         model = Bb
         fields = (
@@ -17,6 +18,7 @@ class NewsListSerialazer(serializers.ModelSerializer):
 
 
 class NewsListDetailSerialazer(serializers.ModelSerializer):
+    """Вывод конкретной новости"""
     class Meta:
         model = Bb
         fields = (
@@ -29,7 +31,7 @@ class NewsListDetailSerialazer(serializers.ModelSerializer):
 
 
 class NewsVoiceSerializer(serializers.ModelSerializer):
-    id_news = serializers.Field(source="has_expired",)
+    id_news = serializers.Field(source="has_expired", )
 
     class Meta:
         model = Bb
